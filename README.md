@@ -71,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-NB: Despite multiple attempts at getting this to run effectively, there seems to be something on my part that I am not seeing. I'm happy for you to mark it and please provide detailed notes on what I'm doing wrong.
+NB: Despite multiple attempts at getting this to run effectively, there seems to be something on my part that I am not seeing. I am happy for you to mark it and please provide detailed notes on how I can improve this code.
