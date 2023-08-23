@@ -6,7 +6,7 @@ function Dashboard({ onLogout }) {
   return (
     <div>
       <h1>Dashboard</h1>
-      <p>Welcome to the dashboard!</p>
+      <p>Welcome to Shubby's Lair!</p>
       <button onClick={onLogout}>Logout</button>
     </div>
   );

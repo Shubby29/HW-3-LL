@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MemoryRouter as Router, Route, Routes } from "react-router";
+import './App.css';
 import Login from "./Login";
 import Dashboard from "./Dashboard";
 
@@ -15,13 +15,15 @@ function App() {
   };
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={isLoggedIn ? <Dashboard onLogout={handleLogout} /> : <Login onLogin={handleLogin} />} />
-        <Route path="/dashboard" element={<Dashboard onLogout={handleLogout} />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      {isLoggedIn ? (
+        <Dashboard handleLogout={handleLogout} />
+      ) : (
+        <Login handleLogin={handleLogin} />
+      )}
+    </div>
   );
 }
 
 export default App;
+
