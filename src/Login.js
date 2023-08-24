@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
-function Login() {
+function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginFailed, setLoginFailed] = useState(false);
@@ -17,6 +17,7 @@ function Login() {
     };
 
     if (username === mockUser.username && password === mockUser.password) {
+      onLogin();
       navigate("/dashboard");
     } else {
       setLoginFailed(true);
@@ -26,9 +27,7 @@ function Login() {
   return (
     <div>
       <h1>Login</h1>
-      {loginFailed && (
-        <p className="error-message">Login unsuccessful. Please try again.</p>
-      )}
+      {loginFailed && <p className="error-message">Login unsuccessful. Please try again.</p>}
       <form onSubmit={handleLogin}>
         <input
           type="text"
